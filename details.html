@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details | ELVÉ Premium Car Rental</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="details-page">
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobile-nav-overlay">
+        <div class="mobile-nav-close" id="mobile-nav-close">
+            <i class="ri-close-line"></i>
+        </div>
+        <div class="mobile-nav-header" style="text-align: center;">
+            <img src="assets/images/logo.png" alt="Logo" style="height: 50px;">
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Fleet</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-nav-actions text-center mt-4">
+            <a href="cars.html" class="btn-primary">Book now</a>
+        </div>
+        <div class="mobile-nav-footer">
+            <div class="mobile-nav-social">
+                <a href="#"><i class="ri-whatsapp-line"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-phone-line"></i></a>
+            </div>
+            <p class="text-muted small">&copy; 2026 ELVÉ PREMIUM</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar details-navbar">
+        <div class="container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Logo">
+                    <span>ELVÉ</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="social-icons">
+                    <a href="#"><i class="ri-whatsapp-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-phone-line"></i></a>
+                </div>
+                <a href="cars.html" class="btn-book">Book now</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cinematic Hero Section -->
+    <section class="details-hero-v2">
+        <div class="container">
+            <div class="breadcrumb-custom mb-5">
+                <a href="index.html">Home</a>
+                <span class="separator"></span>
+                <a href="cars.html">Fleet</a>
+                <span class="separator"></span>
+                <span id="breadcrumb-car-name" class="active-crumb">Car Details</span>
+            </div>
+
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 hero-text-col">
+                    <div class="hero-badge-v2 mb-4 animate-reveal">
+                        <i class="ri-vip-crown-fill"></i>
+                        <span>PREMIUM SELECTION</span>
+                    </div>
+                    <h1 class="details-title-v2 animate-reveal" id="car-name">Loading...</h1>
+                    <p class="car-tagline-v2 animate-reveal" id="car-tagline">Crafted for those who demand the finest in
+                        automotive engineering.</p>
+
+                    <div class="price-box-v2 animate-reveal">
+                        <span class="currency">$</span>
+                        <span class="amount" id="car-price">0</span>
+                        <span class="period">/ day</span>
+                    </div>
+
+                    <div class="hero-stats-grid animate-reveal">
+                        <div class="h-stat-item">
+                            <div class="stat-icon"><i class="ri-flashlight-line"></i></div>
+                            <div class="stat-info">
+                                <span class="label">Power</span>
+                                <span class="value" id="car-power">750 HP</span>
+                            </div>
+                        </div>
+                        <div class="h-stat-item">
+                            <div class="stat-icon"><i class="ri-speed-up-line"></i></div>
+                            <div class="stat-info">
+                                <span class="label">0-100</span>
+                                <span class="value" id="car-acceleration">2.8s</span>
+                            </div>
+                        </div>
+                        <div class="h-stat-item">
+                            <div class="stat-icon"><i class="ri-dashboard-3-line"></i></div>
+                            <div class="stat-info">
+                                <span class="label">Top Speed</span>
+                                <span class="value" id="car-speed">325 km/h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-img-col">
+                    <div class="hero-image-v2">
+                        <div class="image-glow-v2"></div>
+                        <img id="car-image" src="" alt="Car Image" class="main-img-v2 animate-float">
+                        <div class="spec-markers">
+                            <div class="marker m1" data-label="Aerodynamic Wings"></div>
+                            <div class="marker m2" data-label="Carbon Fiber Body"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <section class="details-content-v2 pb-150">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Left Column: Description & Specs -->
+                <div class="col-lg-8">
+                    <!-- Gallery Preview -->
+                    <div class="gallery-wrapper-v2 mb-5 animate-on-scroll">
+                        <div class="section-tag mb-3">GALLERY</div>
+                        <div class="gallery-grid-v2">
+                            <div class="g-item g-large">
+                                <img id="gallery-img-1" src="assets/images/interior_tesla.png" alt="Gallery">
+                            </div>
+                            <div class="g-item">
+                                <img id="gallery-img-2" src="assets/images/feature_main.png" alt="Gallery">
+                            </div>
+                            <div class="g-item">
+                                <img id="gallery-img-3" src="assets/images/hero_car.png" alt="Gallery">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="description-v2 mb-5 animate-on-scroll">
+                        <div class="section-tag mb-3">OVERVIEW</div>
+                        <h2 class="mb-4">Elegance Meets <span class="text-outline">Execution</span></h2>
+                        <p class="text-muted lead mb-4">The ELVÉ philosophy is embedded in every detail of this
+                            magnificent vehicle. From the precision-tuned engine to the hand-stitched leather interior,
+                            this car isn't just a mode of transport—it's a statement of your standard.</p>
+                        <p class="text-muted">Experience the perfect balance of raw power and sophisticated technology.
+                            Our fleet is maintained to the highest showroom standards, ensuring your drive is as smooth
+                            as it is exhilarating. Whether for a weekend getaway or a high-profile business event, the
+                            presence of this vehicle is unmatched.</p>
+                    </div>
+
+                    <!-- Technical Specs Grid -->
+                    <div class="tech-specs-v2 animate-on-scroll">
+                        <div class="section-tag mb-3">TECHNICAL SPECS</div>
+                        <div class="specs-grid-v2">
+                            <div class="spec-card-v2">
+                                <i class="ri-settings-5-line"></i>
+                                <div>
+                                    <h4>Engine</h4>
+                                    <p>V8 Twin Turbo</p>
+                                </div>
+                            </div>
+                            <div class="spec-card-v2">
+                                <i class="ri-steering-fill"></i>
+                                <div>
+                                    <h4>Transmission</h4>
+                                    <p>Automatic 8-Speed</p>
+                                </div>
+                            </div>
+                            <div class="spec-card-v2">
+                                <i class="ri-gas-station-fill"></i>
+                                <div>
+                                    <h4>Fuel Type</h4>
+                                    <p>Premium 98</p>
+                                </div>
+                            </div>
+                            <div class="spec-card-v2">
+                                <i class="ri-user-4-fill"></i>
+                                <div>
+                                    <h4>Capacity</h4>
+                                    <p>2 Adults</p>
+                                </div>
+                            </div>
+                            <div class="spec-card-v2">
+                                <i class="ri-drop-fill"></i>
+                                <div>
+                                    <h4>Drivetrain</h4>
+                                    <p>AWD Performance</p>
+                                </div>
+                            </div>
+                            <div class="spec-card-v2">
+                                <i class="ri-volume-up-fill"></i>
+                                <div>
+                                    <h4>Sound</h4>
+                                    <p>Bose Signature</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Booking Sidebar -->
+                <div class="col-lg-4">
+                    <aside class="booking-sidebar-v2 animate-on-scroll">
+                        <div class="sidebar-card-v2">
+                            <div class="card-header-v2">
+                                <h3>Book Experience</h3>
+                                <p>Start your journey in minutes.</p>
+                            </div>
+
+                            <form id="booking-form-v2" class="mt-4">
+                                <div class="form-group-v2">
+                                    <label>Pick-up Location</label>
+                                    <div class="input-with-icon">
+                                        <i class="ri-map-pin-2-line"></i>
+                                        <input type="text" placeholder="e.g. LAX Airport" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group-v2">
+                                    <label>Rental Date</label>
+                                    <div class="input-with-icon">
+                                        <i class="ri-calendar-line"></i>
+                                        <input type="date" required>
+                                    </div>
+                                </div>
+
+                                <div class="booking-summary-v2">
+                                    <div class="summary-row">
+                                        <span>Daily Rate</span>
+                                        <span id="summary-rate">$0</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span>Service Fee</span>
+                                        <span>$45</span>
+                                    </div>
+                                    <div class="summary-total">
+                                        <span>Estimated Total</span>
+                                        <span id="estimated-total">$0</span>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn-primary w-100 mt-4">Confirm Reservation</button>
+                            </form>
+
+                            <div class="trust-badges mt-5">
+                                <div class="trust-item">
+                                    <i class="ri-shield-check-fill"></i>
+                                    <span>Premium Insurance Included</span>
+                                </div>
+                                <div class="trust-item">
+                                    <i class="ri-truck-fill"></i>
+                                    <span>Free Delivery in 10-mile radius</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Concierge Help -->
+                        <div class="concierge-box-v2 mt-4">
+                            <div class="c-info">
+                                <div class="c-icon"><i class="ri-customer-service-2-fill"></i></div>
+                                <div>
+                                    <h4>VIP Concierge</h4>
+                                    <p>24/7 dedicated support</p>
+                                </div>
+                            </div>
+                            <a href="tel:+1234567890" class="btn-outline-custom w-100 mt-3 text-center">Chat with Us</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Premium -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="f-logo">
+                        <img src="assets/images/logo.png" alt="Logo">
+                        <span>ELVÉ</span>
+                    </a>
+                    <p>Redefining luxury travel in Los Angeles. Experience the world's most exclusive fleet with
+                        bespoke service tailored to your lifestyle.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Our Fleet</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Fleet</h4>
+                    <ul>
+                        <li><a href="cars.html?cat=sport">Sport</a></li>
+                        <li><a href="cars.html?cat=luxury">Luxury</a></li>
+                        <li><a href="cars.html?cat=suv">SUVs</a></li>
+                        <li><a href="cars.html?cat=electric">Electric</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-contact">
+                        <p><i class="ri-map-pin-2-fill"></i> Beverly Hills, CA</p>
+                        <p><i class="ri-mail-fill"></i> hello@elve.com</p>
+                        <p><i class="ri-phone-fill"></i> +1 310 555 0123</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-v2">
+                <p>&copy; 2026 ELVÉ PREMIUM. All rights reserved.</p>
+                <div class="f-socials">
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-whatsapp-line"></i></a>
+                    <a href="#"><i class="ri-linkedin-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Data Handling
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const carName = params.get('car') || 'Luxury Vehicle';
+            const carPrice = params.get('price') || '500';
+            const carImg = params.get('img') || 'hero_car.png';
+
+            document.getElementById('car-name').textContent = carName;
+            document.getElementById('breadcrumb-car-name').textContent = carName;
+            document.getElementById('car-price').textContent = carPrice;
+            document.getElementById('summary-rate').textContent = `$${carPrice}`;
+            document.getElementById('estimated-total').textContent = `$${parseInt(carPrice) + 45}`;
+            document.getElementById('car-image').src = `assets/images/${carImg}`;
+            document.getElementById('car-image').alt = carName;
+
+            // Stats data
+            const stats = {
+                'Dodge Challenger SRT': { hp: '717 HP', accel: '3.4s', speed: '320 km/h', tagline: 'Raw American muscle meets modern precision.' },
+                'Toyota Supra GR': { hp: '382 HP', accel: '3.9s', speed: '250 km/h', tagline: 'The legend reborn for the modern driver.' },
+                'Lamborghini Huracan': { hp: '640 HP', accel: '2.9s', speed: '325 km/h', tagline: 'The pinnacle of Italian aerodynamic art.' },
+                'Porsche 911': { hp: '473 HP', accel: '3.2s', speed: '311 km/h', tagline: 'Timeless design, unparalleled performance.' }
+            };
+
+            if (stats[carName]) {
+                document.getElementById('car-power').textContent = stats[carName].hp;
+                document.getElementById('car-acceleration').textContent = stats[carName].accel;
+                document.getElementById('car-speed').textContent = stats[carName].speed;
+                document.getElementById('car-tagline').textContent = stats[carName].tagline;
+            }
+
+            // GSAP Animations
+            gsap.registerPlugin(ScrollTrigger);
+
+            const tl = gsap.timeline();
+
+            tl.from(".animate-reveal", {
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power4.out"
+            });
+
+            tl.from(".main-img-v2", {
+                scale: 0.8,
+                opacity: 0,
+                duration: 1.5,
+                ease: "power4.out"
+            }, "-=1");
+
+            // Scroll animations
+            gsap.utils.toArray(".animate-on-scroll").forEach(elem => {
+                gsap.from(elem, {
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    }
+                });
+            });
+        });
+
+        // Lenis Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+    </script>
+</body>
+
+</html>

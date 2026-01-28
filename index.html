@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELVÉ | Premium Car Rental Los Angeles</title>
+    <meta name="description"
+        content="Experience luxury like never before. Premium car rental services in Los Angeles with a fleet of top-tier vehicles.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobile-nav-overlay">
+        <div class="mobile-nav-close" id="mobile-nav-close">
+            <i class="ri-close-line"></i>
+        </div>
+        <div class="mobile-nav-header" style="text-align: center;">
+            <img src="assets/images/logo.png" alt="Logo" style="height: 50px;">
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Fleet</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-nav-actions text-center mt-4">
+            <a href="cars.html" class="btn-primary">Book now</a>
+        </div>
+        <div class="mobile-nav-footer">
+            <div class="mobile-nav-social">
+                <a href="#"><i class="ri-whatsapp-line"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-phone-line"></i></a>
+            </div>
+            <p class="text-muted small">&copy; 2026 ELVÉ PREMIUM</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Logo">
+                    <span>ELVÉ</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="social-icons">
+                    <a href="#"><i class="ri-whatsapp-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-phone-line"></i></a>
+                </div>
+                <a href="cars.html" class="btn-book">Book now</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Redesigned -->
+    <section class="main-hero">
+        <div class="hero-bg-wrapper">
+            <div class="hero-bg-img" style="background-image: url('assets/images/hero_main.jpg');"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="hero-badge mb-4">
+                        <i class="ri-vip-diamond-line"></i>
+                        <span>Chosen by more than 250 VIP clients</span>
+                    </div>
+                    <h1 class="hero-title">Experience <br><span class="text-outline">Prestige</span> Rental</h1>
+                    <p class="hero-subtitle mb-5">Enjoy effortless journeys defined by superior comfort, refined style,
+                        and exceptional service—no matter where your destination lies.</p>
+                    <div class="hero-cta d-flex gap-4">
+                        <a href="cars.html" class="btn-primary">View Fleet</a>
+                        <a href="about.html" class="btn-outline-custom">Our Story</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator-down">
+            <span>EXPLORE</span>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <!-- Horizontal Scrolling Section -->
+    <section class="scrolling-images">
+        <div class="scroll-track">
+            <div class="scroll-item"><img src="assets/images/interior_tesla.png" alt="Interior"></div>
+            <div class="scroll-item"><img src="assets/images/audi_etron.png" alt="Audi E-Tron"></div>
+            <div class="scroll-item"><img src="assets/images/bmw_m8.png" alt="BMW M8"></div>
+            <div class="scroll-item"><img src="assets/images/porsche_911.png" alt="Porsche"></div>
+            <div class="scroll-item"><img src="assets/images/lamborghini_huracan.png" alt="Lambo"></div>
+            <!-- Duplicate for infinite effect -->
+            <div class="scroll-item"><img src="assets/images/interior_tesla.png" alt="Interior"></div>
+            <div class="scroll-item"><img src="assets/images/audi_etron.png" alt="Audi E-Tron"></div>
+            <div class="scroll-item"><img src="assets/images/bmw_m8.png" alt="BMW M8"></div>
+            <div class="scroll-item"><img src="assets/images/porsche_911.png" alt="Porsche"></div>
+            <div class="scroll-item"><img src="assets/images/lamborghini_huracan.png" alt="Lambo"></div>
+        </div>
+    </section>
+
+    <!-- Choose Your Ride Section -->
+    <section class="ride-section" id="cars">
+        <div class="container">
+            <h2 class="section-title">Choose Your Ride</h2>
+
+            <div class="row g-4 car-grid">
+                <!-- Car Card 1 -->
+                <div class="col-lg-6">
+                    <a href="details.html?car=Dodge%20Challenger%20SRT&price=299&img=dodge_challenger.png"
+                        class="car-card">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/dodge_challenger.png" alt="Dodge Challenger">
+                            <div class="card-tags">
+                                <span class="tag">Sport</span>
+                                <span class="tag">V8</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Dodge Challenger SRT</h3>
+                            <p>$299 / day</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div class="col-lg-6">
+                    <a href="details.html?car=Toyota%20Supra%20GR&price=350&img=toyota_supra.png" class="car-card">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/toyota_supra.png" alt="Toyota Supra">
+                            <div class="card-tags">
+                                <span class="tag">Coupe</span>
+                                <span class="tag">Turbo</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Toyota Supra GR</h3>
+                            <p>$350 / day</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="cars.html" class="btn-primary">View Full Fleet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Redesigned as Bento Grid) -->
+    <section class="testimonials-section">
+        <div class="testimonial-bg-quote">"</div>
+        <div class="container">
+            <h2 class="section-title">Elevated Perspectives</h2>
+            <div class="testimonials-bento">
+                <!-- James Wilson - Featured -->
+                <div class="bento-item testimonial-card bento-large">
+                    <div class="testimonial-content">
+                        <i class="ri-double-quotes-l"></i>
+                        <p class="testimonial-text">"The service was impeccable. Driving the Huracán along the coast was
+                            a dream come true. ELVÉ redefined my luxury expectations with their attention to detail.
+                            Every moment felt bespoke."</p>
+                    </div>
+                    <div class="client-info">
+                        <img src="assets/images/client_james.png" alt="James Wilson" class="client-avatar">
+                        <div class="client-details">
+                            <h4>James Wilson</h4>
+                            <p>Business Traveler</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sarah Chen - Medium -->
+                <div class="bento-item testimonial-card bento-medium">
+                    <div class="testimonial-content">
+                        <i class="ri-double-quotes-l"></i>
+                        <p class="testimonial-text">"Seamless booking and the car was delivered right to my hotel. Their
+                            high-fashion fleet is perfect for content creation and prestige."</p>
+                    </div>
+                    <div class="client-info">
+                        <img src="assets/images/client_sarah.png" alt="Sarah Chen" class="client-avatar">
+                        <div class="client-details">
+                            <h4>Sarah Chen</h4>
+                            <p>Lifestyle Influencer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elena Rodriguez - Medium -->
+                <div class="bento-item testimonial-card bento-medium">
+                    <div class="testimonial-content">
+                        <i class="ri-double-quotes-l"></i>
+                        <p class="testimonial-text">"The elegance of the Phantom matches my aesthetic perfectly. ELVÉ is
+                            my go-to for all red carpet events in LA."</p>
+                    </div>
+                    <div class="client-info">
+                        <img src="assets/images/client_elena.png" alt="Elena Rodriguez" class="client-avatar">
+                        <div class="client-details">
+                            <h4>Elena Rodriguez</h4>
+                            <p>Fashion Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- David Park - Medium -->
+                <div class="bento-item testimonial-card bento-medium">
+                    <div class="testimonial-content">
+                        <i class="ri-double-quotes-l"></i>
+                        <p class="testimonial-text">"Pure performance. The Taycan was delivered with 100% charge and in
+                            showroom condition. Their tech-first approach is refreshing."</p>
+                    </div>
+                    <div class="client-info">
+                        <img src="assets/images/client_david.png" alt="David Park" class="client-avatar">
+                        <div class="client-details">
+                            <h4>David Park</h4>
+                            <p>Tech Founder</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marcus Thorne - Medium -->
+                <div class="bento-item testimonial-card bento-medium">
+                    <div class="testimonial-content">
+                        <i class="ri-double-quotes-l"></i>
+                        <p class="testimonial-text">"Discretion and quality. They understand the needs of high-profile
+                            clients. The fleet is always up-to-date and immaculate."</p>
+                    </div>
+                    <div class="client-info">
+                        <img src="assets/images/client_marcus.png" alt="Marcus Thorne" class="client-avatar">
+                        <div class="client-details">
+                            <h4>Marcus Thorne</h4>
+                            <p>Real Estate Mogul</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section (Redesigned as Bento Grid) -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title text-center">The ELVÉ Standards</h2>
+            <div class="features-bento mt-5">
+                <!-- Large Featured Card -->
+                <div class="bento-item bento-main">
+                    <div class="bento-main-text">
+                        <span class="bento-number">EST. 2024</span>
+                        <h2>Uncompromising <br> Quality</h2>
+                    </div>
+                </div>
+
+                <!-- Feature 01 -->
+                <div class="bento-item bento-card">
+                    <span class="bento-number">01</span>
+                    <h3>Curated Fleet</h3>
+                    <p>Hand-selected vehicles for performance, prestige, and aesthetic perfection.</p>
+                </div>
+
+                <!-- Feature 02 -->
+                <div class="bento-item bento-card">
+                    <span class="bento-number">02</span>
+                    <h3>VIP Concierge</h3>
+                    <p>24/7 dedicated support ensures your journey is handled with absolute precision.</p>
+                </div>
+
+                <!-- Feature 03 -->
+                <div class="bento-item bento-card">
+                    <span class="bento-number">03</span>
+                    <h3>Seamless Logistics</h3>
+                    <p>Complimentary delivery and pickup anywhere in LA. We work on your time.</p>
+                </div>
+
+                <!-- Detail Image Card -->
+                <div class="bento-item bento-img">
+                    <img src="assets/images/interior_tesla.png" alt="Luxury Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ELVÉ. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Fleet | ELVÉ Premium Car Rental</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Same head content as index/about -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="loading">
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobile-nav-overlay">
+        <div class="mobile-nav-close" id="mobile-nav-close">
+            <i class="ri-close-line"></i>
+        </div>
+        <div class="mobile-nav-header" style="text-align: center;">
+            <img src="assets/images/logo.png" alt="Logo" style="height: 50px;">
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html" class="active">Fleet</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-nav-actions text-center mt-4">
+            <a href="cars.html" class="btn-primary">Book now</a>
+        </div>
+        <div class="mobile-nav-footer">
+            <div class="mobile-nav-social">
+                <a href="#"><i class="ri-whatsapp-line"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-phone-line"></i></a>
+            </div>
+            <p class="text-muted small">&copy; 2026 ELVÉ PREMIUM</p>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Logo">
+                    <span>ELVÉ</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html" class="active">Cars</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="social-icons">
+                    <a href="#"><i class="ri-whatsapp-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-phone-line"></i></a>
+                </div>
+                <a href="#" class="btn-book">Book now</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fleet Hero Redesigned -->
+    <section class="inner-hero">
+        <div class="hero-bg-wrapper">
+            <div class="hero-bg-img" style="background-image: url('assets/images/fleet_hero.png');"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-10">
+                    <div class="breadcrumb-custom mb-3">
+                        <a href="index.html">Home</a>
+                        <span class="separator"></span>
+                        <span>Our Fleet</span>
+                    </div>
+                    <div class="hero-badge mb-4">
+                        <i class="ri-steering-2-line"></i>
+                        <span>Curated Excellence</span>
+                    </div>
+                    <h1 class="hero-title">Premier <br><span class="text-outline">Collection</span></h1>
+                    <p class="hero-subtitle">Meticulously maintained, performance-driven selection of the world's finest
+                        vehicles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Grid -->
+    <section class="ride-section">
+        <div class="container">
+
+            <!-- Category Filter -->
+            <div class="category-filter mb-5 text-center">
+                <span class="filter-indicator"></span>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="sport">Sport</button>
+                <button class="filter-btn" data-filter="exotic">Exotic</button>
+                <button class="filter-btn" data-filter="luxury">Luxury</button>
+            </div>
+
+            <div class="row g-4 car-grid">
+                <!-- Car Card 1 -->
+                <div class="col-lg-4 col-md-6 car-item" data-category="sport">
+                    <a href="details.html?car=Dodge%20Challenger%20SRT&price=299&img=dodge_challenger.png"
+                        class="car-card">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/dodge_challenger.png" alt="Dodge Challenger">
+                            <div class="card-tags"><span class="tag">Sport</span></div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Dodge Challenger SRT</h3>
+                            <div class="card-price-row">
+                                <div class="card-price">$299 <span>/ day</span></div>
+                            </div>
+                            <div class="card-specs-mini">
+                                <div class="mini-spec"><i class="ri-fire-line"></i> V8</div>
+                                <div class="mini-spec"><i class="ri-user-line"></i> 4</div>
+                                <div class="mini-spec"><i class="ri-flashlight-line"></i> 3.6s</div>
+                            </div>
+                            <div class="card-footer-btn">
+                                <span>View Details</span> <i class="ri-arrow-right-up-line"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div class="col-lg-4 col-md-6 car-item" data-category="sport">
+                    <a href="details.html?car=Toyota%20Supra%20GR&price=350&img=toyota_supra.png" class="car-card">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/toyota_supra.png" alt="Toyota Supra">
+                            <div class="card-tags"><span class="tag">Coupe</span></div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Toyota Supra GR</h3>
+                            <div class="card-price-row">
+                                <div class="card-price">$350 <span>/ day</span></div>
+                            </div>
+                            <div class="card-specs-mini">
+                                <div class="mini-spec"><i class="ri-fire-line"></i> I6</div>
+                                <div class="mini-spec"><i class="ri-user-line"></i> 2</div>
+                                <div class="mini-spec"><i class="ri-flashlight-line"></i> 3.9s</div>
+                            </div>
+                            <div class="card-footer-btn">
+                                <span>View Details</span> <i class="ri-arrow-right-up-line"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Car Card 3 -->
+                <div class="col-lg-4 col-md-6 car-item" data-category="exotic">
+                    <a href="details.html?car=Porsche%20911%20Turbo%20S&price=550&img=porsche_911.png" class="car-card">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/porsche_911.png" alt="Porsche 911">
+                            <div class="card-tags"><span class="tag">Iconic</span></div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Porsche 911 Turbo S</h3>
+                            <div class="card-price-row">
+                                <div class="card-price">$550 <span>/ day</span></div>
+                            </div>
+                            <div class="card-specs-mini">
+                                <div class="mini-spec"><i class="ri-fire-line"></i> F6</div>
+                                <div class="mini-spec"><i class="ri-user-line"></i> 2</div>
+                                <div class="mini-spec"><i class="ri-flashlight-line"></i> 2.7s</div>
+                            </div>
+                            <div class="card-footer-btn">
+                                <span>View Details</span> <i class="ri-arrow-right-up-line"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Car Card 4 -->
+                <div class="col-lg-4 col-md-6 car-item" data-category="exotic">
+                    <a href="details.html?car=Lamborghini%20Huracán&price=899&img=lamborghini_huracan.png"
+                        class="car-card">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/lamborghini_huracan.png" alt="Lamborghini">
+                            <div class="card-tags"><span class="tag">Exotic</span></div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Lamborghini Huracán</h3>
+                            <div class="card-price-row">
+                                <div class="card-price">$899 <span>/ day</span></div>
+                            </div>
+                            <div class="card-specs-mini">
+                                <div class="mini-spec"><i class="ri-fire-line"></i> V10</div>
+                                <div class="mini-spec"><i class="ri-user-line"></i> 2</div>
+                                <div class="mini-spec"><i class="ri-flashlight-line"></i> 2.9s</div>
+                            </div>
+                            <div class="card-footer-btn">
+                                <span>View Details</span> <i class="ri-arrow-right-up-line"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Car Card 5 -->
+                <div class="col-lg-4 col-md-6 car-item" data-category="luxury">
+                    <a href="details.html?car=Audi%20RS6%20Avant&price=450&img=audi_rs6.png" class="car-card">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/audi_rs6.png" alt="Audi RS6">
+                            <div class="card-tags"><span class="tag">Wagon</span></div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Audi RS6 Avant</h3>
+                            <div class="card-price-row">
+                                <div class="card-price">$450 <span>/ day</span></div>
+                            </div>
+                            <div class="card-specs-mini">
+                                <div class="mini-spec"><i class="ri-fire-line"></i> V8</div>
+                                <div class="mini-spec"><i class="ri-user-line"></i> 5</div>
+                                <div class="mini-spec"><i class="ri-flashlight-line"></i> 3.5s</div>
+                            </div>
+                            <div class="card-footer-btn">
+                                <span>View Details</span> <i class="ri-arrow-right-up-line"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Car Card 6 -->
+                <div class="col-lg-4 col-md-6 car-item" data-category="sport">
+                    <a href="details.html?car=Alfa%20Romeo%204C&price=400&img=alfa_romeo.png" class="car-card">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/alfa_romeo.png" alt="Alfa Romeo">
+                            <div class="card-tags"><span class="tag">Italian</span></div>
+                        </div>
+                        <div class="card-info">
+                            <h3>Alfa Romeo 4C</h3>
+                            <div class="card-price-row">
+                                <div class="card-price">$400 <span>/ day</span></div>
+                            </div>
+                            <div class="card-specs-mini">
+                                <div class="mini-spec"><i class="ri-fire-line"></i> I4</div>
+                                <div class="mini-spec"><i class="ri-user-line"></i> 2</div>
+                                <div class="mini-spec"><i class="ri-flashlight-line"></i> 4.1s</div>
+                            </div>
+                            <div class="card-footer-btn">
+                                <span>View Details</span> <i class="ri-arrow-right-up-line"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="fleet-cta-section pb-5">
+        <div class="container">
+            <div class="fleet-cta-box">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h2 class="cta-title">Don't see your <br> dream car?</h2>
+                        <p class="cta-text">Our exclusive collection is constantly growing. Reach out to our 24/7
+                            concierge for bespoke sourcing or special requirements.</p>
+                        <a href="contact.html" class="btn-primary">Talk to Concierge</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ELVÉ. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

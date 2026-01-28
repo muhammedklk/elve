@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ELVÉ Premium Car Rental</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Same head content -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="loading">
+
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobile-nav-overlay">
+        <div class="mobile-nav-close" id="mobile-nav-close">
+            <i class="ri-close-line"></i>
+        </div>
+        <div class="mobile-nav-header" style="text-align: center;">
+            <img src="assets/images/logo.png" alt="Logo" style="height: 50px;">
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Fleet</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="mobile-nav-actions text-center mt-4">
+            <a href="cars.html" class="btn-primary">Book now</a>
+        </div>
+        <div class="mobile-nav-footer">
+            <div class="mobile-nav-social">
+                <a href="#"><i class="ri-whatsapp-line"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-phone-line"></i></a>
+            </div>
+            <p class="text-muted small">&copy; 2026 ELVÉ PREMIUM</p>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Logo">
+                    <span>ELVÉ</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <!-- Actions -->
+                <a href="#" class="btn-book">Book now</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Redesigned -->
+    <section class="inner-hero">
+        <div class="hero-bg-wrapper">
+            <div class="hero-bg-img" style="background-image: url('assets/images/contact_hero.png');"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="breadcrumb-custom mb-3">
+                        <a href="index.html">Home</a>
+                        <span class="separator"></span>
+                        <span>Contact Us</span>
+                    </div>
+                    <div class="hero-badge mb-4">
+                        <i class="ri-customer-service-2-line"></i>
+                        <span>Available 24/7 Concierge</span>
+                    </div>
+                    <h1 class="hero-title">Start Your <br><span class="text-outline">Journey</span></h1>
+                    <p class="hero-subtitle">Our concierge team is at your service 24/7 for bespoke sourcing or special
+                        requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section Redesigned -->
+    <section class="contact-section py-0">
+        <div class="container">
+            <div class="contact-grid-premium">
+                <!-- Sidebar Info Cards -->
+                <div class="contact-sidebar">
+                    <div class="contact-card-v2">
+                        <i class="ri-map-pin-2-line"></i>
+                        <h3>Headquarters</h3>
+                        <p>8721 Sunset Blvd, West Hollywood, <br>Los Angeles, CA 90069</p>
+                    </div>
+                    <div class="contact-card-v2">
+                        <i class="ri-customer-service-2-line"></i>
+                        <h3>Concierge Line</h3>
+                        <p>+1 (310) 555-0123 <br>Available 24/7 for VIPs</p>
+                    </div>
+                    <div class="contact-card-v2">
+                        <i class="ri-mail-send-line"></i>
+                        <h3>Direct Inquiry</h3>
+                        <p>concierge@elve.com <br>booking@elve.com</p>
+                    </div>
+                </div>
+
+                <!-- Premium Form Box -->
+                <div class="premium-form-box">
+                    <div class="form-header mb-5">
+                        <h2 class="section-title text-start mb-2">Request a <span class="text-outline">Concierge</span>
+                            Call</h2>
+                        <p class="text-muted">Fill out the form below and our lead concierge will contact you within 15
+                            minutes.</p>
+                    </div>
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 form-floating-custom">
+                                <input type="text" id="name" placeholder=" " required>
+                                <label for="name">Full Name</label>
+                            </div>
+                            <div class="col-md-6 form-floating-custom">
+                                <input type="email" id="email" placeholder=" " required>
+                                <label for="email">Email Address</label>
+                            </div>
+                            <div class="col-md-12 form-floating-custom">
+                                <input type="text" id="subject" placeholder=" ">
+                                <label for="subject">Vehicle Interest (Optional)</label>
+                            </div>
+                            <div class="col-12 form-floating-custom">
+                                <textarea id="message" rows="4" placeholder=" " required></textarea>
+                                <label for="message">How can we elevate your journey?</label>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn-primary w-100 border-0">Initiate Contact</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map Integration -->
+            <div class="map-container-premium">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.4554346985!2d-118.38466182346766!3d34.09249031593972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2beb9007e6027%3A0xc3f98295b95acaf9!2s8721%20Sunset%20Blvd%2C%20West%20Hollywood%2C%20CA%2090069%2C%20USA!5e0!3m2!1sen!2sin!4v1706355600000!5m2!1sen!2sin"
+                    allowfullscreen="" loading="lazy"></iframe>
+                <div class="map-overlay-card">
+                    <h4 class="mb-3">Private Showroom</h4>
+                    <p class="text-muted small mb-0">Open Mon-Sat by appointment only. Secure parking available for
+                        clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ELVÉ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
