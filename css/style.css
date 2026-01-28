@@ -621,57 +621,11 @@ img {
     grid-column: span 1;
 }
 
-@media (max-width: 1200px) {
-    .features-bento {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-    }
 
-    .testimonials-bento {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 992px) {
-    .testimonials-section {
-        padding: 100px 0;
-    }
 
-    .testimonial-card {
-        padding: 35px;
-    }
 
-    .testimonial-bg-quote {
-        font-size: 15rem;
-    }
-}
 
-@media (max-width: 768px) {
-
-    .features-bento,
-    .testimonials-bento {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .bento-item.bento-main,
-    .bento-item.bento-large,
-    .testimonials-bento .bento-item.bento-large {
-        grid-column: span 1;
-    }
-
-    .bento-main-text h2 {
-        font-size: 2.5rem;
-    }
-
-    .testimonial-card {
-        padding: 30px;
-    }
-
-    .testimonial-text {
-        font-size: 1.05rem;
-    }
-}
 
 /* --- Inner Pages Styles --- */
 /* --- Main Hero Redesign --- */
@@ -864,22 +818,7 @@ img {
     }
 }
 
-@media (max-width: 768px) {
-    .fleet-stats-new {
-        gap: 30px;
-        flex-wrap: wrap;
-    }
 
-    .f-stat-item .stat-num {
-        font-size: 2rem;
-    }
-
-    .main-hero {
-        height: auto;
-        padding-top: 150px;
-        padding-bottom: 100px;
-    }
-}
 
 /* --- Inner Pages Hero Redesign --- */
 .inner-hero {
@@ -979,31 +918,9 @@ img {
     background: rgba(255, 255, 255, 0.05);
 }
 
-@media (max-width: 992px) {
-    .inner-hero .hero-title {
-        font-size: 3.5rem;
-    }
-}
 
-@media (max-width: 768px) {
-    .inner-hero {
-        height: 400px;
-        text-align: center;
-    }
 
-    .inner-hero .breadcrumb-custom {
-        justify-content: center;
-    }
 
-    .inner-hero .hero-subtitle {
-        margin: 0 auto;
-    }
-
-    .inner-hero .hero-title {
-        font-size: 2.8rem;
-        letter-spacing: -1px;
-    }
-}
 
 .page-header {
     padding: 150px 0 50px;
@@ -1360,21 +1277,7 @@ img {
     display: none;
 }
 
-@media (max-width: 1024px) {
-    .menu-toggle {
-        display: block;
-    }
 
-    .hero-title {
-        font-size: 3.5rem;
-    }
-
-    .nav-links,
-    .navbar .social-icons,
-    .navbar .btn-book {
-        display: none !important;
-    }
-}
 
 .mobile-nav-actions .btn-primary {
     padding: 10px 27px !important;
@@ -1385,78 +1288,7 @@ img {
     margin-bottom: 5px;
 }
 
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
 
-    .hero-content {
-        text-align: center;
-    }
-
-    .hero-subtitle {
-        margin: 0 auto 2.5rem;
-        font-size: 0.95rem;
-    }
-
-    .hero-badge {
-        margin: 0 auto 2rem;
-        font-size: 0.75rem;
-    }
-
-    .btn-primary,
-    .btn-outline-custom {
-        padding: 0.8rem 2rem;
-        font-size: 0.9rem;
-    }
-
-    .card-img-wrapper {
-        height: 160px;
-    }
-
-    .inner-hero {
-        height: 380px;
-    }
-
-    .section-title {
-        font-size: 2.2rem;
-        margin-bottom: 40px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-    }
-
-    .stat-group-elegant {
-        gap: 30px;
-    }
-
-    .category-filter {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        justify-content: flex-start;
-        border-radius: 20px;
-        padding: 5px;
-        scrollbar-width: none;
-        display: flex;
-        justify-content: center;
-        /* Hide scrollbar Firefox */
-    }
-
-    .category-filter::-webkit-scrollbar {
-        display: none;
-        /* Hide scrollbar Chrome/Safari */
-    }
-
-    .filter-btn {
-        padding: 10px 20px;
-        font-size: 0.75rem;
-        flex-shrink: 0;
-    }
-}
 
 /* --- Fleet CTA --- */
 .fleet-cta-box {
@@ -1498,15 +1330,7 @@ img {
     z-index: 1;
 }
 
-@media (max-width: 992px) {
-    .fleet-cta-box {
-        padding: 50px 30px;
-    }
 
-    .cta-title {
-        font-size: 2.5rem;
-    }
-}
 
 /* --- About Page Enhancements --- */
 /* --- Contact Page Styles --- */
@@ -1644,17 +1468,7 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 991px) {
-    .contact-grid-premium {
-        grid-template-columns: 1fr;
-        margin-top: 50px;
-        gap: 50px;
-    }
 
-    .premium-form-box {
-        padding: 40px;
-    }
-}
 
 .story-image-reveal:hover img {
     transform: scale(1);
@@ -1793,45 +1607,11 @@ img {
     margin-bottom: 0;
 }
 
-@media (max-width: 1200px) {
-    .showroom-wrapper {
-        gap: 50px;
-    }
-}
 
-@media (max-width: 991px) {
-    .philosophies-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .stat-group-elegant {
-        flex-direction: column;
-        gap: 40px;
-    }
 
-    .showroom-wrapper {
-        grid-template-columns: 1fr;
-    }
 
-    .showroom-image-box {
-        height: 450px;
-        order: 1;
-    }
 
-    .showroom-content-box {
-        order: 2;
-    }
-}
-
-@media (max-width: 768px) {
-    .showroom-image-box {
-        height: 300px;
-    }
-
-    .stat-group-elegant {
-        gap: 20px;
-    }
-}
 
 /* --- Experience Section --- */
 .experience-section {
@@ -2030,44 +1810,13 @@ img {
     border-color: white;
 }
 
-@media (max-width: 1200px) {
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 60px;
-    }
-}
 
-@media (max-width: 991px) {
-    .exp-wrapper {
-        flex-direction: column;
-        gap: 80px;
-    }
 
-    .exp-image-stack {
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-}
 
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
 
-    .footer-bottom-v2 {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-}
 
-@media (max-width: 426px) {
-    .features-section {
-        padding-bottom: 0px;
-    }
-}
+
+
 
 /* --- Car Details Page V2 --- */
 .details-page {
@@ -2503,63 +2252,11 @@ img {
 }
 
 /* Responsive */
-@media (max-width: 1200px) {
-    .hero-stats-grid {
-        gap: 15px;
-    }
-}
 
-@media (max-width: 991px) {
-    .details-hero-v2 {
-        padding: 120px 0 60px;
-        text-align: center;
-    }
 
-    .hero-text-col {
-        order: 2;
-    }
 
-    .hero-img-col {
-        order: 1;
-    }
 
-    .car-tagline-v2 {
-        margin-left: auto;
-        margin-right: auto;
-    }
 
-    .price-box-v2 {
-        justify-content: center;
-    }
-
-    .hero-stats-grid {
-        justify-content: center;
-    }
-
-    .booking-sidebar-v2 {
-        position: static;
-        margin-top: 50px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-stats-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .specs-grid-v2 {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-grid-v2 {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .g-large {
-        grid-row: span 1;
-    }
-}
 
 .pb-150 {
     padding-bottom: 150px;
