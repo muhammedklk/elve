@@ -184,39 +184,75 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Car Filter Logic
+    // Car Search & Filter Logic
+    const searchInput = document.getElementById('carSearch');
     const filterButtons = document.querySelectorAll('.filter-btn');
     const carItems = document.querySelectorAll('.car-item');
-    const filterIndicator = document.querySelector('.filter-indicator');
+    const carGrid = document.querySelector('.car-grid');
 
-    const updateFilterIndicator = (activeBtn) => {
-        if (!filterIndicator || !activeBtn) return;
-        filterIndicator.style.width = `${activeBtn.offsetWidth}px`;
-        filterIndicator.style.left = `${activeBtn.offsetLeft}px`;
+    const filterCars = () => {
+        const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+        let visibleCount = 0;
+
+        carItems.forEach(item => {
+            const carTitle = item.querySelector('h3').innerText.toLowerCase();
+            const carCategory = item.getAttribute('data-category');
+
+            const matchesSearch = carTitle.includes(searchTerm);
+            const matchesCategory = activeFilter === 'all' || carCategory === activeFilter;
+
+            if (matchesSearch && matchesCategory) {
+                if (item.classList.contains('hide')) {
+                    item.classList.remove('hide');
+                    gsap.fromTo(item,
+                        { opacity: 0, scale: 0.9, y: 20 },
+                        { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'power2.out', clearProps: 'all' }
+                    );
+                }
+                visibleCount++;
+            } else {
+                item.classList.add('hide');
+            }
+        });
+
+        // Handle empty results
+        let emptyMsg = document.getElementById('no-results-msg');
+        if (visibleCount === 0) {
+            if (!emptyMsg) {
+                emptyMsg = document.createElement('div');
+                emptyMsg.id = 'no-results-msg';
+                emptyMsg.className = 'col-12 text-center py-5 animate-fade-in';
+                emptyMsg.innerHTML = `
+                    <i class="ri-search-eye-line" style="font-size: 3rem; color: var(--primary); opacity: 0.5;"></i>
+                    <h3 class="mt-3">No vehicles found</h3>
+                    <p class="text-muted">Try adjusting your search or category filters.</p>
+                `;
+                carGrid.appendChild(emptyMsg);
+            }
+        } else if (emptyMsg) {
+            emptyMsg.remove();
+        }
+
+        ScrollTrigger.refresh();
     };
 
-    // Initialize indicator on load
-    const activeBtn = document.querySelector('.filter-btn.active');
-    if (activeBtn) {
-        setTimeout(() => updateFilterIndicator(activeBtn), 100);
+    if (searchInput) {
+        searchInput.addEventListener('input', filterCars);
     }
 
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             filterButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            updateFilterIndicator(btn);
 
-            const filterValue = btn.getAttribute('data-filter');
-            carItems.forEach(item => {
-                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                    item.classList.remove('hide');
-                    gsap.fromTo(item, { opacity: 0, scale: 0.9, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'power2.out' });
-                } else {
-                    item.classList.add('hide');
-                }
-            });
-            ScrollTrigger.refresh();
+            const indicator = document.querySelector('.filter-indicator');
+            if (indicator) {
+                indicator.style.width = `${btn.offsetWidth}px`;
+                indicator.style.left = `${btn.offsetLeft}px`;
+            }
+
+            filterCars();
         });
     });
 
