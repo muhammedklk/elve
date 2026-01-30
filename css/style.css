@@ -515,7 +515,7 @@ img {
 /* --- Features Bento Grid --- */
 .features-section {
     background: var(--bg-color);
-    padding-bottom: 0px;
+    padding-bottom: 100px;
 }
 
 .features-bento {
@@ -658,6 +658,10 @@ img {
     background-position: center;
     transform: scale(1);
     animation: heroZoom 20s infinite alternate linear;
+}
+
+.hero-bg-img video{
+    width: 100%;
 }
 
 @keyframes heroZoom {

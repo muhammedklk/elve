@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -372,18 +372,90 @@
 
             // Stats data
             const stats = {
-                'Ford Mustang Steeda': { hp: '500 HP', accel: '4.1s', speed: '260 km/h', tagline: 'The race-bred muscle icon, redefined for pure performance.' },
-                'Chevrolet Camaro SS': { hp: '455 HP', accel: '4.0s', speed: '250 km/h', tagline: 'Precision handling meets aggressive street styling.' },
-                'Lamborghini Aventador': { hp: '770 HP', accel: '2.8s', speed: '350 km/h', tagline: 'A V12 masterpiece of raw power and aerodynamic art.' },
-                'Mercedes-AMG GT': { hp: '523 HP', accel: '3.7s', speed: '310 km/h', tagline: 'Uncompromising grand touring luxury with racing DNA.' },
-                'Porsche 911 Carrera': { hp: '473 HP', accel: '3.2s', speed: '311 km/h', tagline: 'Timeless design, unparalleled rear-engine precision.' }
+                'Ford Mustang Steeda': {
+                    hp: '500 HP', accel: '4.1s', speed: '260 km/h',
+                    tagline: 'The race-bred muscle icon, redefined for pure performance.',
+                    engine: '5.0L V8 Coyote', trans: '10-Speed Auto', capacity: '4 Adults',
+                    gallery: ['mustang_steeda_front.jpg', 'mustang_motion.jpg', 'mustang_focus_lifestyle.jpg']
+                },
+                'Chevrolet Camaro SS': {
+                    hp: '455 HP', accel: '4.0s', speed: '250 km/h',
+                    tagline: 'Precision handling meets aggressive street styling.',
+                    engine: '6.2L V8 LT1', trans: '8-Speed Auto', capacity: '4 Adults',
+                    gallery: ['camaro_blue_sunset.jpg', 'mustang_motion.jpg', 'feature_main.png']
+                },
+                'Lamborghini Aventador': {
+                    hp: '770 HP', accel: '2.8s', speed: '350 km/h',
+                    tagline: 'A V12 masterpiece of raw power and aerodynamic art.',
+                    engine: '6.5L V12', trans: '7-Speed ISR', capacity: '2 Adults',
+                    gallery: ['lamborghini_aventador_new.jpg', 'ferrari_rear.png', 'hero_car_2.png']
+                },
+                'Mercedes-AMG GT': {
+                    hp: '523 HP', accel: '3.7s', speed: '310 km/h',
+                    tagline: 'Uncompromising grand touring luxury with racing DNA.',
+                    engine: '4.0L V8 Biturbo', trans: '7-Speed DCT', capacity: '2 Adults',
+                    gallery: ['amg_gt_silver.jpg', 'amg_gt_red_forest.jpg', 'feature_main.png']
+                },
+                'Porsche 911 Turbo S': {
+                    hp: '640 HP', accel: '2.7s', speed: '330 km/h',
+                    tagline: 'Timeless design, unparalleled rear-engine precision.',
+                    engine: '3.8L Flat-6', trans: '8-Speed PDK', capacity: '2 Adults',
+                    gallery: ['porsche_911.png', 'porsche_classic.jpg', 'hero_car_3.png']
+                },
+                'BMW 7 Series': {
+                    hp: '523 HP', accel: '4.4s', speed: '250 km/h',
+                    tagline: 'The ultimate executive experience, blending immense power with peerless comfort.',
+                    engine: '4.4L V8 TwinPower', trans: '8-Speed Auto', capacity: '5 Adults',
+                    gallery: ['bmw_sedan_luxury.jpg', 'bmw_m8.png', 'interior_tesla.png']
+                },
+                'BMW M4 Competition': {
+                    hp: '503 HP', accel: '3.8s', speed: '290 km/h',
+                    tagline: 'Unrivaled precision meets raw power in a matte finish masterpiece.',
+                    engine: '3.0L I6 TwinPower', trans: '8-Speed M Steptronic', capacity: '4 Adults',
+                    gallery: ['bmw_m4_matte.jpg', 'bmw_m4.jpg', 'feature_main.png']
+                },
+                'Alfa Romeo 4C': {
+                    hp: '237 HP', accel: '4.5s', speed: '257 km/h',
+                    tagline: 'Italian soul and lightweight performance for the purist driver.',
+                    engine: '1.75L Turbo I4', trans: '6-Speed TCT', capacity: '2 Adults',
+                    gallery: ['alfa_romeo_4c_red.jpg', 'alfa_romeo.png', 'hero_car_2.png']
+                },
+                'Toyota GR86': {
+                    hp: '228 HP', accel: '6.1s', speed: '225 km/h',
+                    tagline: 'Pure driving joy in its most balanced form.',
+                    engine: '2.4L Boxer-4', trans: '6-Speed Manual', capacity: '4 Adults',
+                    gallery: ['toyota_gr86.jpg', 'toyota_supra.png', 'feature_main.png']
+                },
+                'Range Rover Sport': {
+                    hp: '395 HP', accel: '5.2s', speed: '225 km/h',
+                    tagline: 'The peak of luxury capability and command.',
+                    engine: '3.0L I6 Mild Hybrid', trans: '8-Speed Auto', capacity: '5 Adults',
+                    gallery: ['range_rover_sport.jpg', 'interior_tesla.png', 'hero_car_3.png']
+                }
             };
 
             if (stats[carName]) {
-                document.getElementById('car-power').textContent = stats[carName].hp;
-                document.getElementById('car-acceleration').textContent = stats[carName].accel;
-                document.getElementById('car-speed').textContent = stats[carName].speed;
-                document.getElementById('car-tagline').textContent = stats[carName].tagline;
+                const s = stats[carName];
+                document.getElementById('car-power').textContent = s.hp;
+                document.getElementById('car-acceleration').textContent = s.accel;
+                document.getElementById('car-speed').textContent = s.speed;
+                document.getElementById('car-tagline').textContent = s.tagline;
+
+                // Update Tech Specs
+                const specTexts = document.querySelectorAll('.spec-card-v2 p');
+                if (specTexts.length >= 4) {
+                    specTexts[0].textContent = s.engine;
+                    specTexts[1].textContent = s.trans;
+                    specTexts[3].textContent = s.capacity;
+                }
+
+                // Update Gallery
+                if (s.gallery) {
+                    s.gallery.forEach((img, index) => {
+                        const galleryImg = document.getElementById(`gallery-img-${index + 1}`);
+                        if (galleryImg) galleryImg.src = `assets/images/${img}`;
+                    });
+                }
             }
 
             // GSAP Animations
