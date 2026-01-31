@@ -660,7 +660,7 @@ img {
     animation: heroZoom 20s infinite alternate linear;
 }
 
-.hero-bg-img video{
+.hero-bg-img video {
     width: 100%;
 }
 
@@ -720,6 +720,10 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 2rem;
     font-size: 0.85rem;
+}
+
+.footer-col ul {
+    padding-left: 0;
 }
 
 .hero-badge i {
