@@ -661,7 +661,10 @@ img {
 }
 
 .hero-bg-img video {
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
 }
 
 @keyframes heroZoom {
@@ -723,7 +726,7 @@ img {
 }
 
 .footer-col ul {
-    padding-left: 0;
+    padding-left: 0 !important;
 }
 
 .hero-badge i {
@@ -2485,4 +2488,9 @@ img {
 
 .pb-150 {
     padding-bottom: 150px;
+}
+
+
+.breadcrumb-custom a {
+    padding-right: 10px;
 }
