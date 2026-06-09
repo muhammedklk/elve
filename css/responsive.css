@@ -322,4 +322,8 @@
     .features-section {
         padding-bottom: 0px;
     }
+
+    .hero-bg-img video {
+        width: 100%;
+    }
 }
