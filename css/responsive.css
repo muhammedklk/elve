@@ -324,6 +324,6 @@
     }
 
     .hero-bg-img video {
-        width: 100%;
+        width: unset;
     }
 }
